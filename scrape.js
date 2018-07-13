@@ -22,7 +22,7 @@ class Scraper{
             if(attribute === 'text')
                 return $(string).text();
             else 
-                return $(string).html()
+                return $(string).html();
         }
     }
 }

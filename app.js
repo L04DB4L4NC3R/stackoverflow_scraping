@@ -1,1 +1,9 @@
-const functions = require("./functions")
+const {
+    questions
+} = require("./functions");
+
+
+questions()
+.then(console.log)
+.catch(console.log);
+
