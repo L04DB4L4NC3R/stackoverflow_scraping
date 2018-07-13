@@ -1,0 +1,31 @@
+{
+  "name": "stackoverflow",
+  "version": "1.0.0",
+  "description": "A tool to scrape stack overflow",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angadsharma1016/stackoverflow_scraping.git"
+  },
+  "keywords": [
+    "scrape",
+    "scraping",
+    "stackoverflow",
+    "stack",
+    "overflow",
+    "scrape",
+    "stackoverflow"
+  ],
+  "author": "angadsharma1016",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angadsharma1016/stackoverflow_scraping/issues"
+  },
+  "homepage": "https://github.com/angadsharma1016/stackoverflow_scraping#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
