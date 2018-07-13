@@ -11,12 +11,13 @@ class Scraper{
         }
         this.string = string;
         this.attribute = attribute;
-        this.load = cheerio.load(this.data());
         this.scrape = async ()=>{
+            let $ = cheerio.load(await this.data());
+            console.log ($(string).text())
             if(attribute === 'text')
-                return await this.load(string).text();
+                return $(string).text();
             else 
-                return await this.load(string).html()
+                return $(string).html()
         }
     }
 }

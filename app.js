@@ -3,6 +3,6 @@ const scraper = require("./scrape");
 let obj = scraper(1,"nodemon","a","html");
 
 
-obj.data()
+obj.scrape()
 .then(console.log)
 .catch(console.log);
