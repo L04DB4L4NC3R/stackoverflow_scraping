@@ -3,7 +3,7 @@ const {
 } = require("./functions");
 
 
-questions()
+questions("nodemon")
 .then(console.log)
 .catch(console.log);
 

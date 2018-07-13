@@ -1,7 +1,7 @@
 const scraper = require("./scrape");
 
-let obj = scraper(1,"nodemon","text");
 
-exports.questions = async ()=>{
+exports.questions = async (query)=>{
+    let obj = scraper(1,query,"text");
     return await obj.scrape("a[class=question-hyperlink]");
 }
