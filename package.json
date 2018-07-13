@@ -4,7 +4,7 @@
   "description": "A tool to scrape stack overflow",
   "main": "app.js",
   "scripts": {
-    "test": "node test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/angadsharma1016/stackoverflow_scraping#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "mocha": "^5.2.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
