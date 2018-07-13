@@ -6,8 +6,7 @@ const {
     Key
 } = require("selenium-webdriver");
 
-
-let func = async (query)=>{
+module.exports = async (query)=>{
     let driver = await new Builder().forBrowser("firefox").build();
     try{
         await driver.get(`https://stackoverflow.com/search?q=${query}`);
@@ -18,21 +17,3 @@ let func = async (query)=>{
         await driver.quit();
     }
 }
-
-
-const cheerio = require("cheerio");
-
-let funcc = async ()=>{
-    let $ = cheerio.load(await func("mongoose"));
-    let answer = $("pre").text()
-    let question = $("h1").text();
-    return {
-        question,
-        answer
-    }
-
-};
-
-funcc()
-.then(console.log)
-.catch(console.log)

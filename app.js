@@ -1,9 +1,13 @@
 const {
-    questions
+    questions,
+    latest
 } = require("./functions");
 
 
-questions("nodemon")
+// questions("nodemon")
+// .then(console.log)
+// .catch(console.log);
+
+latest("nodemon")
 .then(console.log)
 .catch(console.log);
-

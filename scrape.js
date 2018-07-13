@@ -1,12 +1,29 @@
 const cheerio = require("cheerio"); 
 const getHTML = require("./get");
-
+const latestPage = require("./latest");
 
 /**
  * @description Initialize an instance of this class to have the cheerio ready
  * 
  * pass the extraction string in scrape method for scraping
  */
+
+
+
+
+
+let gotLatest = async (query)=>{
+    let $ = cheerio.load(await latestPage(query));
+    let answer = $("pre").text()
+    let question = $("h1").text();
+    return {
+        question,
+        answer
+    }
+
+};
+
+
 
 class Scraper{
     constructor(options,query,attribute){
@@ -23,7 +40,8 @@ class Scraper{
                 return $(string).text();
             else 
                 return $(string).html();
-        }
+        },
+        this.getLatest = gotLatest;
     }
 }
 
